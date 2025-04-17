@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pinterest Create Page</title>
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <i class="fa-brands fa-pinterest"></i>
+        </div>
+        <div class="links">
+            <a href="imaggall.html">Home</a>
+            <a href="Today.html">Today</a>
+            <a href="" class="active">Create <i class="fa-solid fa-angle-down"></i></a>
+        </div>
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="icon">
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-sharp fa-solid fa-comment-dots"></i>
+            <a href="profil1.php">
+                <i class="fa-solid fa-circle-user"></i>
+            </a>
+        </div>
+    </div>
+    <form action="create.php" method="POST" enctype="multipart/form-data">
+        <div class="content">
+            <h2 class="create-pin-header">Create Pin</h2>
+            <div class="form-container">
+                <div>
+                    <label for="media">Media</label>
+                    <div class="upload-area">
+                        <p>Choose a file or drag and drop it here</p>
+                        <span>📤</span>
+                        <input type="file" id="media" name="Media" accept="image/*,video/*" multiple>
+                    </div>
+                </div>                
+                <div class="form-fields">
+                    <div>
+                        <label for="Title">Title</label>
+                        <input type="text" id="title" name="Title" placeholder="Add a title">
+                    </div>
+                    <div>
+                        <label for="Description">Description</label>
+                        <textarea id="description" rows="4" name="Description" placeholder="Add a detailed description"></textarea>
+                    </div>
+                    <div>
+                        <label for="Link">Link</label>
+                        <input type="url" id="link" name="Link" placeholder="Add a link">
+                    </div>
+                    <button type="submit">Create</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
